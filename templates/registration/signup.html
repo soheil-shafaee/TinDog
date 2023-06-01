@@ -15,6 +15,7 @@
             {{ form|crispy }}
             <button class="btn btn-danger" type="submit">Signup</button>
         </form>
-        <p>You have already account? <a href="{% url 'login' %}">Log in</a></p>
+        <p>You have already account? <a href="{% url 'login' %}">Log in</a> |
+            <a href="{% url 'password_reset' %}">Forgot Password?</a></p>
     </div>
 {% endblock content %}
