@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # Local:
     'pages',
     'accounts',
+    'dogs',
 ]
 
 MIDDLEWARE = [
