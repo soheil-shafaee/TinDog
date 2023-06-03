@@ -9,6 +9,7 @@ class Dog(models.Model):
     explain = models.TextField()
     location = models.CharField(max_length=200)
     vaccinated = models.BooleanField()
+    gender = models.CharField(max_length=200)
     dog_photo = models.ImageField(upload_to='dogs_photo/')
 
     def __str__(self):

@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+
+{% block page_title %}
+    Dogs list view
+{% endblock page_title %}
+
+{% block content %}
+    {% for dog in dogs %}
+        <h1>Dog name: {{ dog.name }}</h1>
+    {% endfor %}
+
+{% endblock content %}
