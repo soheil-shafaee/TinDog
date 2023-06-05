@@ -8,3 +8,9 @@ class DogListView(generic.ListView):
     model = Dog
     template_name = 'dogs/dogs_list_view.html'
     context_object_name = 'dogs'
+
+
+class DogDetailView(generic.DetailView):
+    models = Dog
+    template_name = 'dogs/dog_detail_view.html'
+    context_object_name = 'dogs'

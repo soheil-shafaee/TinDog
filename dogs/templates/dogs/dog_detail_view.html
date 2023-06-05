@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    {{ dog.name|capfirst }} details
+{% endblock page_title %}
+
+{% block content %}
+    <h1>{{ dog.name }}</h1>
+    <h3>{{ dog.gender }}</h3>
+    <p>{{ dog.explain }}</p>
+
+{% endblock content %}
