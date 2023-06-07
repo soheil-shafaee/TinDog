@@ -7,6 +7,6 @@
 {% block content %}
     <h1>{{ dog.name }}</h1>
     <h3>{{ dog.gender }}</h3>
-    <p>{{ dog.explain }}</p>
+    <p>{{ dog.explain|linebreaks }}</p>
 
 {% endblock content %}

@@ -7,7 +7,9 @@
 
 {% block content %}
     {% for dog in dogs %}
-        <h1>Dog name:<a href="{% url 'dog_detail_view' dog.id %}"> {{ dog.name }}</a></h1>
+        <h1>Dog name:<a href="{% url 'dogs_detail_view' dog.id %}"> {{ dog.name }}</a></h1>
+        <p>{{ dog.explain|truncatewords:20 }}</p>
     {% endfor %}
+        <p><a href="{% url 'dog_create_view' %}">Create your account</a></p>
 
 {% endblock content %}
