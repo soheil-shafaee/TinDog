@@ -26,3 +26,12 @@ class DogCreateView(generic.CreateView):
 
     def get_queryset(self):
         return Dog.objects.filter()
+
+
+class DogUpdateView(generic.UpdateView):
+    models = Dog
+    fields = ['name', 'breed', 'age', 'gender', 'vaccinated', 'children', 'explain', 'location', 'dog_photo']
+    template_name = 'dogs/dog_update_view.html'
+
+    def get_queryset(self):
+        return Dog.objects.filter()
