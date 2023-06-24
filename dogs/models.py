@@ -10,8 +10,8 @@ class Dog(models.Model):
     vaccinated = models.BooleanField(default=True)
     explain = models.TextField()
     location = models.CharField(max_length=200)
-    gender = models.CharField(max_length=10)
-    dog_photo = models.ImageField(upload_to='dogs_photo/')
+    gender = models.CharField(max_length=10, blank=True)
+    dog_photo = models.ImageField(upload_to='dogs_photo/', blank=True, null=True)
 
     def __str__(self):
         return f'{self.name}: {self.breed}'
