@@ -35,3 +35,12 @@ class DogUpdateView(generic.UpdateView):
 
     def get_queryset(self):
         return Dog.objects.filter()
+
+
+class DogDeleteView(generic.DeleteView):
+    models = Dog
+    template_name = 'dogs/dog_delete_view.html'
+    success_url = reverse_lazy('dogs_list_view')
+
+    def get_queryset(self):
+        return Dog.objects.filter()

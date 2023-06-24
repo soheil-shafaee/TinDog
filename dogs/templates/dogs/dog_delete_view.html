@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+    Delete {{ dog.name }}'s info
+{% endblock page_title %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <h1>Do you want to delete '{{ dog.name }}' information?</h1>
+        <button type="submit" class="btn btn-danger">Yes,I'm sure</button>
+        <a href="{% url 'dogs_list_view' %}">Back to the home</a>
+    </form>
+{% endblock content%}

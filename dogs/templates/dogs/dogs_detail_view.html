@@ -9,5 +9,6 @@
     <h3>{{ dog.gender }}</h3>
     <p>{{ dog.explain|linebreaks }}</p>
     <a href="{% url 'dog_update_view' dog.id %}">Edit dog's info</a>
+    <a href="{% url 'dog_delete_view' dog.id %}">Delete dog's info</a>
 
 {% endblock content %}
