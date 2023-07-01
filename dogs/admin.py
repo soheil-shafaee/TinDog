@@ -4,7 +4,7 @@ from .models import Dog
 
 
 class DogAdmin(admin.ModelAdmin):
-    list_display = ('name', 'breed', 'gender', 'vaccinated', )
+    list_display = ('name', 'breed', 'sex', 'vaccinated', )
 
 
 admin.site.register(Dog, DogAdmin)
