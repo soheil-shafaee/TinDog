@@ -21,7 +21,7 @@ def dog_details_view(request, pk):
 
 class DogCreateView(generic.CreateView):
     models = Dog
-    fields = ['name', 'breed', 'age', 'gender', 'vaccinated', 'children', 'explain', 'location', 'dog_photo']
+    fields = ['name', 'breed', 'age', 'sex', 'vaccinated', 'children', 'explain', 'location', 'dog_photo']
     template_name = 'dogs/dog_create_view.html'
 
     def get_queryset(self):
@@ -30,7 +30,7 @@ class DogCreateView(generic.CreateView):
 
 class DogUpdateView(generic.UpdateView):
     models = Dog
-    fields = ['name', 'breed', 'age', 'gender', 'vaccinated', 'children', 'explain', 'location', 'dog_photo']
+    fields = ['name', 'breed', 'age', 'sex', 'vaccinated', 'children', 'explain', 'location', 'dog_photo']
     template_name = 'dogs/dog_update_view.html'
 
     def get_queryset(self):
