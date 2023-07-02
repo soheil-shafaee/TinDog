@@ -8,6 +8,25 @@
 {% endblock page_title %}
 
 {% block content %}
+    <section id="title">
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary">
+                <a class="navbar-brand fontlogo" href="">TinDog</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Login|Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light btn-sm download-button">SIGNUP</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
 
     <!-- Title -->
@@ -122,11 +141,14 @@
                         <div class="card-body">
                             <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
                             <h2 class="price-text"><a style="color: #1b1b1b "
-                                    href="{% url 'dogs_detail_view' dog.id %}">{{ dog.name|capfirst }}</a></h2>
+                                                      href="{% url 'dogs_detail_view' dog.id %}">{{ dog.name|capfirst }}</a>
+                            </h2>
                             <p>{{ dog.sex|capfirst }}</p>
                             <p>{{ dog.age }} years old</p>
                             <p>{{ dog.location }}</p>
-                            <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
+                            <button class="btn btn-lg btn-block btn-outline-dark" type="reset"
+                                    href="{% url 'dogs_detail_view' dog.id %} }">Read More
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -147,33 +169,4 @@
         </nav>
     </section>
 
-
-    <!-- Call to Action -->
-
-    <section id="cta">
-
-        <div class="container-fluid">
-            <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
-            <button class="btn btn-lg btn-dark btn-margin" type="button"><i class="fa-brands fa-apple"></i> Download
-            </button>
-            <button class="btn btn-lg btn-outline-light btn-margin" type="button"><i
-                    class="fa-brands fa-google-play"></i>
-                Download
-            </button>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-
-    <footer id="footer">
-        <div class="container-fluid">
-            <a href=""><i class="fa-brands fa-facebook-f fa-2x media-icon"></i></a>
-            <a href=""><i class="fa-brands fa-instagram fa-2x media-icon"></i></a>
-            <a href=""><i class="fa-brands fa-twitter fa-2x media-icon"></i></a>
-            <a href=""><i class="fa-solid fa-envelope fa-2x media-icon"></i></a>
-            <p class="copyright-text">© Copyright TinDog</p>
-        </div>
-
-    </footer>
 {% endblock content %}
