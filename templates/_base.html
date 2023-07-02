@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>{% block page_title %}{% endblock page_title %}</title>
     {% block style %}
         <!-- Google Font -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,8 +18,6 @@
         <link rel="stylesheet" href="{% static 'css/all.css' %}">
     {% endblock style %}
 
-
-    <title>{% block page_title %}{% endblock page_title %}</title>
 </head>
 <body>
 
@@ -42,32 +41,33 @@
         </ul>
     </nav>
 
+    <!-- Call to Action -->
+    <section id="cta">
+
+        <div class="container-fluid">
+            <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
+            <button class="btn btn-lg btn-dark btn-margin" type="button"><i class="fa-brands fa-apple"></i> Download
+            </button>
+            <button class="btn btn-lg btn-outline-light btn-margin" type="button"><i
+                    class="fa-brands fa-google-play"></i>
+                Download
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <a href=""><i class="fa-brands fa-facebook-f fa-2x media-icon"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-2x media-icon"></i></a>
+            <a href=""><i class="fa-brands fa-twitter fa-2x media-icon"></i></a>
+            <a href=""><i class="fa-solid fa-envelope fa-2x media-icon"></i></a>
+            <p class="copyright-text">© Copyright TinDog</p>
+        </div>
+
+    </footer>
 {% endblock content %}
-<!-- Call to Action -->
-<section id="cta">
 
-    <div class="container-fluid">
-        <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
-        <button class="btn btn-lg btn-dark btn-margin" type="button"><i class="fa-brands fa-apple"></i> Download
-        </button>
-        <button class="btn btn-lg btn-outline-light btn-margin" type="button"><i
-                class="fa-brands fa-google-play"></i>
-            Download
-        </button>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer">
-    <div class="container-fluid">
-        <a href=""><i class="fa-brands fa-facebook-f fa-2x media-icon"></i></a>
-        <a href=""><i class="fa-brands fa-instagram fa-2x media-icon"></i></a>
-        <a href=""><i class="fa-brands fa-twitter fa-2x media-icon"></i></a>
-        <a href=""><i class="fa-solid fa-envelope fa-2x media-icon"></i></a>
-        <p class="copyright-text">© Copyright TinDog</p>
-    </div>
-
-</footer>
 
 <!-- Bootstrap script -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
