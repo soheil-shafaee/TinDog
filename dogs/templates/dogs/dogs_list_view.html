@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load static %}
+
 
 {% block page_title %}
     Dogs list view
@@ -22,7 +24,7 @@
             </button>
         </div>
         <div class=col-lg-6>
-            <img class="title-image" src="images/iphone6.png" alt="iphone-mockup">
+            <img class="title-image" src="{% static 'images/iphone6.png' %}" alt="iphone-mockup">
         </div>
     </div>
     </div>
@@ -65,14 +67,14 @@
                     <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest
                         Corgi
                         on TinDog. Woof.</h2>
-                    <img class="testimonials-images" src="images/dog-img.jpg" alt="dog-profile">
+                    <img class="testimonials-images" src="{% static 'images/dog-img.jpg' %}" alt="dog-profile">
                     <em>Pebbles, New York</em>
                 </div>
                 <div class="carousel-item">
                     <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the
                         love
                         of their life. I think.</h2>
-                    <img class="testimonials-images" src="images/lady-img.jpg" alt="lady-profile">
+                    <img class="testimonials-images" src="{% static 'images/lady-img.jpg' %}" alt="lady-profile">
                     <em>Beverly, Illinois</em>
                 </div>
             </div>
@@ -95,10 +97,10 @@
     <!-- Press -->
 
     <section id="press">
-        <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
-        <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
-        <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
-        <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+        <img class="press-logo" src="{% static 'images/techcrunch.png' %}" alt="tc-logo">
+        <img class="press-logo" src="{% static 'images/tnw.png' %}" alt="tnw-logo">
+        <img class="press-logo" src="{% static 'images/bizinsider.png' %}" alt="biz-insider-logo">
+        <img class="press-logo" src="{% static 'images/mashable.png' %}" alt="mashable-logo">
 
     </section>
 
@@ -111,98 +113,26 @@
         <p>Meet new partner, fall in love and enjoy your life.</p>
 
         <div class="row">
-            <div class=" pricing-column col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Chihuahua</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
-                        <h2 class="price-text">Hunner</h2>
-                        <p>Male</p>
-                        <p>2 years old</p>
-                        <p>Roma, Italy</p>
-                        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
-            <div class=" pricing-column col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Labrador</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
-                        <h2 class="price-text ">Jimmy</h2>
-                        <p>Female</p>
-                        <p>3 years old</p>
-                        <p>London, England</p>
-                        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
+            {% for dog in dogs %}
+                <div class=" pricing-column col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h3>{{ dog.breed|capfirst }}</h3>
+                        </div>
+                        <div class="card-body">
+                            <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
+                            <h2 class="price-text"><a style="color: #1b1b1b "
+                                    href="{% url 'dogs_detail_view' dog.id %}">{{ dog.name|capfirst }}</a></h2>
+                            <p>{{ dog.sex|capfirst }}</p>
+                            <p>{{ dog.age }} years old</p>
+                            <p>{{ dog.location }}</p>
+                            <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class=" pricing-column col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Mastiff</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
-                        <h2 class="price-text">Piggie</h2>
-                        <p>Male</p>
-                        <p>1 years old</p>
-                        <p>New York, United Stated</p>
-                        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
-            <div class=" pricing-column col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Chihuahua</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
-                        <h2 class="price-text">Hunner</h2>
-                        <p>Male</p>
-                        <p>2 years old</p>
-                        <p>Roma, Italy</p>
-                        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
-            <div class=" pricing-column col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Labrador</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
-                        <h2 class="price-text">Jimmy</h2>
-                        <p>Female</p>
-                        <p>3 years old</p>
-                        <p>London, England</p>
-                        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
-            <div class=" pricing-column col-lg-4 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Mastiff</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
-                        <h2 class="price-text">Piggie</h2>
-                        <p>Male</p>
-                        <p>1 years old</p>
-                        <p>New York, United Stated</p>
-                        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation ">
             <ul class="pagination justify-content-center ">
                 <li class="page-item disabled">
                     <a class="page-link">Previous</a>
@@ -246,11 +176,4 @@
         </div>
 
     </footer>
-
-    {% for dog in dogs %}
-        <h1>Dog name:<a href="{% url 'dogs_detail_view' dog.id %}"> {{ dog.name|capfirst }}</a></h1>
-        <p>{{ dog.explain|truncatewords:20 }}</p>
-    {% endfor %}
-    <p><a href="{% url 'dog_create_view' %}">Create your account</a></p>
-
 {% endblock content %}

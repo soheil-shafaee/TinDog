@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
@@ -8,18 +10,12 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <!-- Font awesome -->
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
 
-    <!-- Bootstrap script -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-            crossorigin="anonymous"></script>
+
 
     <title>{% block page_title %}{% endblock page_title %}</title>
 </head>
@@ -29,16 +25,12 @@
         <!-- Nav Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary">
             <a class="navbar-brand fontlogo" href="">TinDog</a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapase" id="navbarScroll"> -->
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#footer">Contact</a>
+                    <a class="nav-link" href="{% url 'dog_create_view' %}">New&nbsp;&nbsp;Dog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#pricing">Login|Logout</a>
+                    <a class="nav-link" href="{% url 'login' %}">Login|Logout</a>
                 </li>
                 <li class="nav-item">
                     <button type="button" class="btn btn-outline-light btn-sm download-button">SIGNUP
@@ -51,6 +43,12 @@
 
         {% endblock content %}
 
-
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+            crossorigin="anonymous"></script>
 </body>
 </html>

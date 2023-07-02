@@ -11,6 +11,7 @@ p {
   color: #8f8f8f;
 }
 
+
 /* Hedings */
 .big-heading {
   font-family: 'Kanit';
@@ -305,6 +306,7 @@ p {
 
 .pagination a:hover,
 .pagination .active a {
+    border:1px gray;
     background-color: #8f8f8f;
     color: #ffffff;
 }
