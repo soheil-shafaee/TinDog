@@ -6,66 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>{% block page_title %}{% endblock page_title %}</title>
     {% block style %}
-        <!-- Google Font -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-              integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-              crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-        <!-- Font awesome -->
-        <link rel="stylesheet" href="{% static 'css/all.css' %}">
+
     {% endblock style %}
 
 </head>
 <body>
 
 {% block content %}
-    <section id="title">
-    <div class="container-fluid">
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary">
-        <a class="navbar-brand fontlogo" href="">TinDog</a>
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'dog_create_view' %}">New&nbsp;&nbsp;Dog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Login|Logout</a>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-outline-light btn-sm download-button">SIGNUP
-                </button>
-            </li>
-        </ul>
-    </nav>
 
-    <!-- Call to Action -->
-    <section id="cta">
-
-        <div class="container-fluid">
-            <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
-            <button class="btn btn-lg btn-dark btn-margin" type="button"><i class="fa-brands fa-apple"></i> Download
-            </button>
-            <button class="btn btn-lg btn-outline-light btn-margin" type="button"><i
-                    class="fa-brands fa-google-play"></i>
-                Download
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container-fluid">
-            <a href=""><i class="fa-brands fa-facebook-f fa-2x media-icon"></i></a>
-            <a href=""><i class="fa-brands fa-instagram fa-2x media-icon"></i></a>
-            <a href=""><i class="fa-brands fa-twitter fa-2x media-icon"></i></a>
-            <a href=""><i class="fa-solid fa-envelope fa-2x media-icon"></i></a>
-            <p class="copyright-text">© Copyright TinDog</p>
-        </div>
-
-    </footer>
 {% endblock content %}
 
 
