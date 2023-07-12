@@ -17,7 +17,7 @@
 {% endblock style %}
 
 {% block page_title %}
-    {{ dog.name|capfirst }} details
+    {{ dog.name|capfirst }} information
 {% endblock page_title %}
 
 
@@ -30,7 +30,7 @@
                 <a class="navbar-brand fontlogo" href="{% url 'dogs_list_view' %}">TinDog</a>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#footer">Contact</a>
+                        <a class="nav-link" href="{% url 'dog_create_view' %}">New&nbsp&nbspDog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Login|Logout</a>
