@@ -1,0 +1,157 @@
+
+body {
+    font-family: 'Kanit';
+    text-align: center;
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kanit';
+    color: white;
+}
+
+
+/* Box Section */
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #ff4c68;
+    box-sizing: border-box;
+    box-shadow: #ff4c68;
+    border-radius: 10px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #bdb8b8;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.login-box a:hover {
+    background: #fff;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px white,
+    0 0 25px white,
+    0 0 50px white,
+    0 0 100px white;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+
+
+.login-box a span:nth-child(1) {
+    bottom: 2px;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white);
+    animation: btn-anim1 2s linear infinite;
+}
+
+button {
+ height: 2.8em;
+ width: 9em;
+ background: transparent;
+ -webkit-animation: jello-horizontal 0.9s both;
+ animation: jello-horizontal 0.9s both;
+ border: 2px solid #ffffff;
+ outline: none;
+ color: #ffffff;
+ font-size: 17px;
+}
+
+button:hover {
+ background: #ffffff;
+ color: #000000;
+ animation: squeeze3124 0.9s both;
+}
+
+@keyframes squeeze3124 {
+ 0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+ }
+
+ 30% {
+  -webkit-transform: scale3d(1.25, 0.75, 1);
+  transform: scale3d(1.25, 0.75, 1);
+ }
+
+ 40% {
+  -webkit-transform: scale3d(0.75, 1.25, 1);
+  transform: scale3d(0.75, 1.25, 1);
+ }
+
+ 50% {
+  -webkit-transform: scale3d(1.15, 0.85, 1);
+  transform: scale3d(1.15, 0.85, 1);
+ }
+
+ 65% {
+  -webkit-transform: scale3d(0.95, 1.05, 1);
+  transform: scale3d(0.95, 1.05, 1);
+ }
+
+ 75% {
+  -webkit-transform: scale3d(1.05, 0.95, 1);
+  transform: scale3d(1.05, 0.95, 1);
+ }
+
+ 100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+ }
+}
