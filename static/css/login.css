@@ -106,15 +106,15 @@ button {
  background: transparent;
  -webkit-animation: jello-horizontal 0.9s both;
  animation: jello-horizontal 0.9s both;
- border: 2px solid #016DD9;
+ border: 2px solid #ffffff;
  outline: none;
- color: #016DD9;
+ color: #ffffff;
  font-size: 17px;
 }
 
 button:hover {
- background: #016DD9;
- color: #ffffff;
+ background: #ffffff;
+ color: #000000;
  animation: squeeze3124 0.9s both;
 }
 
