@@ -156,7 +156,7 @@
                             <h3>{{ dog.breed|capfirst }}</h3>
                         </div>
                         <div class="card-body">
-                            <img class="circle" src="images/dog-img.jpg" alt="dog-profile">
+                            <img class="circle" src="{{ dog.dog_photo.url }}" alt="dog-profile">
                             <h2 class="price-text"><a style="color: #1b1b1b"
                                                       href="{% url 'dogs_detail_view' dog.id %}">{{ dog.name|capfirst }}</a>
                             </h2>
