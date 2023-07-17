@@ -6,7 +6,7 @@
 
 
 {% block page_title %}
-    Login
+    Sign up
 {% endblock page_title %}
 
 {% block style %}
@@ -15,8 +15,8 @@
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_dog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/new_dog.css' %}">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/f088c76b07.js" crossorigin="anonymous"></script>
     <!-- Bootstrap script -->
@@ -29,27 +29,18 @@
 {% endblock style %}
 
 {% block content %}
-
-
-    <section id="box">
-        <div class="login-box">
-            <h1>Sign up</h1>
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <br>
-                <br>
-                <button class="btn btn-light" type="submit">
-                    Signup
-                </button>
-                <div>
-                    <a href="{% url 'login' %}">Have an account?</a>
-                </div>
-            </form>
+   <section id="item_card">
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="card-title">Create your account</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" action="" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-1">Sing up</button>
+                </form>
+            </div>
         </div>
-
     </section>
-
-
-
 {% endblock content %}
