@@ -23,6 +23,7 @@
 
 
 {% block content %}
+
     <section id="title">
         <div class="container-fluid">
             <!-- Nav Bar -->
@@ -52,11 +53,12 @@
     </section>
 
     <section id="detail">
-        <div class="card col-sm-8">
+        <div class="card h-100 w-100 col-sm-8">
             <table class="col col-sm-4">
                 <tr>
-                    <th rowspan="10"><img src="{{ dog.dog_photo.url }}" class="img-thumbnail"
-                                          alt="dog_photo"></th>
+                    <th rowspan="10">
+                        <div class="image-container"><img src="{{ dog.dog_photo.url }}" class="img-thumbnail"
+                                          alt="dog_photo"></div></th>
                 </tr>
                 <tr>
                     <th colspan="4" rowspan="1"><h1>{{ dog.name|capfirst }}</h1></th>
