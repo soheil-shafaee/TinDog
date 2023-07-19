@@ -78,6 +78,10 @@ hr{
 #detail{
   margin-top: 7%;
 }
+img{
+  max-width: 5%;
+  height: 5%;
+}
 
 .card {
   max-width: 80%;
